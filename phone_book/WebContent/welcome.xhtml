@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Welcome Page</title>
+        <style>
+        	.tab {
+				overflow: hidden;
+				border: 1px solid #ccc;
+				background-color: #f1f1f1;
+				}
+			.tablinks{
+				background-color: inherit;
+				float: left;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 14px 16px;
+				transition: 0.3s;
+				}
+			.panel{
+        		background-color: lightgrey;
+        		border : 1px solid black;
+        		border-radius : 12px;
+        		padding: 50px;
+  				margin: 20px;
+        	}
+        </style>
+    </h:head>
+    <h:body>
+        
+        <h5 style="color: #008CBA;">User : #{newUser.firstName} #{newUser.lastName}</h5>
+        
+       <h:form>
+       
+	       <div class="tab">
+			  <h:commandButton value="Add Contact" action="add-contact-form.xhtml" class="tablinks"/>
+			  <h:commandButton value="My Contact" action="show-contact.xhtml" class="tablinks"/>
+		   </div>
+       
+       	   <div class="panel">
+       	   		<h2>Welcome to PHONE BOOK</h2><br/>
+       	   		<h4>My name is milad arianfar and I have a bachelor's degree in petroleum engineering.<br/>
+       	   		but due to my interest in the web world, I started learning Java a year ago.<br/>
+       	   		I build this web site Using JSF and I used MYSQL as a database<br/>
+       	   		I also used Hibernate for ORM<br/>
+       	   		In this website you must Login or sign up and manage your contact(Add Contact , Update , Delete)<br/>
+       	   		I did 0 to 100 of this project myself.</h4>
+       	   </div>
+       
+       </h:form>
+    </h:body>
+</html>

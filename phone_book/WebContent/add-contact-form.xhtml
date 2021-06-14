@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Signin Page</title>
+        <style>
+        	body{
+        		background-color: lightgrey;
+        	}
+        	.button1{
+        		border-radius: 12px;
+        		background-color: #008CBA;
+        		border: none;
+				color: white;
+				padding: 15px 32px;
+        	}
+        	.button2{
+        		border-radius: 12px;
+        		background-color: #f44336;
+        		border: none;
+				color: white;
+				padding: 15px 32px;
+        	}
+        	.input{
+        		border-radius: 12px;
+        		border : 1px solid black;
+        		width: 50%;
+        		padding: 12px 20px;
+  				margin: 8px 0;
+        	}
+        	.panel{
+        		background-color: white;
+        		border : 1px solid black;
+        		border-radius : 12px;
+        		padding: 50px;
+  				margin: 20px;
+        	}
+        </style>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            
+            <div class="panel">
+            
+            <h5 style="color: #008CBA;">User : #{newUser.firstName} #{newUser.lastName}</h5>
+            
+            	<h1>Add Contact Form</h1>
+            		<h3>First Name</h3>
+            		<p:inputText id="firstname" value="#{contact.firstName}" styleClass="input"/>
+            		<h3>Last Name</h3>
+            		<p:inputText id="lastname" value="#{contact.lastName}" styleClass="input"/>
+            		<h3>Email</h3>
+            		<p:inputText id="email" value="#{contact.email}" styleClass="input"/>
+            		<h3>Address</h3>
+            		<p:inputText id="address" value="#{contact.address}" styleClass="input"/>
+            		<h3>Mobile</h3>
+            		<p:inputText id="mobile" value="#{contact.mobile}" styleClass="input"/>
+            		<h3>Home Number</h3>
+            		<p:inputText id="home_number" value="#{contact.homeNumber}" styleClass="input"/>
+            		<h3>Work Number</h3>
+            		<p:inputText id="work_number" value="#{contact.workNumber}" styleClass="input"/>
+            		<br/><br/>
+            		<h:commandButton value="Add" action="#{contactController.addContact(contact , newUser)}" styleClass="button1"/>
+            		<h:commandButton value="Back To Welcome" action="welcome.xhtml" styleClass="button2"/>
+            		
+            </div>
+            
+        </h:form>
+        
+    </h:body>
+</html>

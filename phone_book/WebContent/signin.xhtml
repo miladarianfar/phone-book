@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Signin Page</title>
+        <style>
+        	body{
+        		background-color: lightgrey;
+        	}
+        	.button1{
+        		border-radius: 12px;
+        		background-color: #008CBA;
+        		border: none;
+				color: white;
+				padding: 15px 32px;
+        	}
+        	.button2{
+        		border-radius: 12px;
+        		background-color: #f44336;
+        		border: none;
+				color: white;
+				padding: 15px 32px;
+        	}
+        	.input{
+        		border-radius: 12px;
+        		border : 1px solid black;
+        		width: 50%;
+        		padding: 12px 20px;
+  				margin: 8px 0;
+        	}
+        	.panel{
+        		background-color: white;
+        		border : 1px solid black;
+        		border-radius : 12px;
+        		padding: 50px;
+  				margin: 20px;
+        	}
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="myForm">
+			<div class="panel">
+				<h1>Sign in</h1>
+				
+					<h3>Email</h3>
+					<p:inputText  value="#{user.email}" id="email" styleClass="input"/>
+					<h:messages for="email" globalOnly="true" />
+					<h3>Password</h3>
+					<p:inputText value="#{user.password}" id="password" styleClass="input"/>
+				<br/>
+				<h:commandButton value="SignUp" action="signup.xhtml" styleClass="button1"/>
+            	<h:commandButton value="SignIn" action="#{userController.check(user)}" styleClass="button2"/>
+            	
+        
+            </div>
+            
+        </h:form>
+        
+    </h:body>
+</html>
